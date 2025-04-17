@@ -1,23 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './core/layout/header.component';
+import { MainComponent } from './core/layout/main.component';
+import { FooterComponent } from './core/layout/footer.component';
 
 @Component({
-  imports: [RouterModule],
+  imports: [RouterModule, HeaderComponent, MainComponent, FooterComponent],
   selector: 'app-root',
-  template: ` <div class="navbar bg-base-100 shadow-sm">
-    <div class="flex-none">
-      <button class="btn btn-square btn-ghost">
-        <span class="material-icons"> menu </span>
-      </button>
-    </div>
-    <div class="flex-1">
-      <a class="btn btn-ghost text-xl">MyLittleGarden</a>
-    </div>
-    <div class="flex-none">
-      <button class="btn btn-square btn-ghost">
-        <span class="material-icons"> more_horiz </span>
-      </button>
-    </div>
-  </div>`,
+  template: ` <app-header />
+    <app-main>
+      <router-outlet></router-outlet>
+    </app-main>
+    <app-footer />`,
 })
 export class AppComponent {}
