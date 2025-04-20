@@ -24,6 +24,18 @@ import { DatePipe } from '@angular/common';
         }
       </div>
     </div>
+
+    @for (number of [1, 2, 3]; track number) {
+    <div class="mt-3 card w-96 bg-base-100 card-sm shadow-sm w-full lg:max-w-7xl lg:mx-auto">
+      <div class="card-body">
+        <h2 class="card-title">Mon potager</h2>
+        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+        <div class="justify-end card-actions">
+          <button class="btn btn-primary">Détail</button>
+        </div>
+      </div>
+    </div>
+    }
   `,
 })
 export class CalendrierComponent {
